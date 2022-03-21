@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ewQ-zi-PmH">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Search" id="BYZ-38-t0r" customClass="ViewController" customModule="Punk_Beer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NNW-rM-aSc">
+                                <rect key="frame" x="0.0" y="135" width="414" height="727"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="wNS-Lj-42W" customClass="BeerTableViewCell" customModule="Punk_Beer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="155.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wNS-Lj-42W" id="1s6-R8-scU">
+                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="155.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qR-uo-P37">
+                                                    <rect key="frame" x="327" y="67.5" width="38.5" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottle" translatesAutoresizingMaskIntoConstraints="NO" id="ylt-nk-pLm">
+                                                    <rect key="frame" x="20" y="8" width="139.5" height="139.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="ylt-nk-pLm" secondAttribute="height" multiplier="1:1" id="Ufl-Fw-ic2"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9o-C7-DLC">
+                                                    <rect key="frame" x="167.5" y="8" width="139.5" height="139.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="E9o-C7-DLC" secondAttribute="height" multiplier="1:1" id="U8R-ar-spT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="E9o-C7-DLC" firstAttribute="leading" secondItem="ylt-nk-pLm" secondAttribute="trailing" constant="8" id="2aW-2F-2wX"/>
+                                                <constraint firstItem="E9o-C7-DLC" firstAttribute="bottom" secondItem="ylt-nk-pLm" secondAttribute="bottom" id="6BU-zq-1JY"/>
+                                                <constraint firstItem="ylt-nk-pLm" firstAttribute="top" secondItem="1s6-R8-scU" secondAttribute="top" constant="8" id="SKB-5a-ZNQ"/>
+                                                <constraint firstItem="E9o-C7-DLC" firstAttribute="top" secondItem="ylt-nk-pLm" secondAttribute="top" id="Ua8-8c-cS1"/>
+                                                <constraint firstAttribute="trailing" secondItem="5qR-uo-P37" secondAttribute="trailing" constant="20" id="cag-IV-ZAU"/>
+                                                <constraint firstItem="ylt-nk-pLm" firstAttribute="leading" secondItem="1s6-R8-scU" secondAttribute="leading" constant="20" id="kUH-6U-FuK"/>
+                                                <constraint firstItem="5qR-uo-P37" firstAttribute="leading" secondItem="E9o-C7-DLC" secondAttribute="trailing" constant="20" id="oZD-r9-xCq"/>
+                                                <constraint firstItem="5qR-uo-P37" firstAttribute="centerY" secondItem="E9o-C7-DLC" secondAttribute="centerY" id="qhN-94-V3Y"/>
+                                                <constraint firstAttribute="bottom" secondItem="ylt-nk-pLm" secondAttribute="bottom" constant="8" id="xOT-DF-XyK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="abvLabel" destination="E9o-C7-DLC" id="2jI-E5-G2i"/>
+                                            <outlet property="beerImage" destination="ylt-nk-pLm" id="ZSJ-d6-6WO"/>
+                                            <outlet property="beerNameLabel" destination="5qR-uo-P37" id="z4o-tZ-BYS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="FCr-A3-JvX"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="r8x-uJ-4aY"/>
+                                    <outlet property="prefetchDataSource" destination="BYZ-38-t0r" id="tkn-CN-9mz"/>
+                                </connections>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FGY-wG-Z2t">
+                                <rect key="frame" x="8" y="96" width="398" height="32"/>
+                                <segments>
+                                    <segment title="All ABV"/>
+                                    <segment title="Low ABV"/>
+                                    <segment title="Med. ABV"/>
+                                    <segment title="High ABV"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="06c-Zz-n5m"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="FGY-wG-Z2t" firstAttribute="trailing" secondItem="NNW-rM-aSc" secondAttribute="trailing" constant="-8" id="3aj-Rv-XNe"/>
+                            <constraint firstItem="FGY-wG-Z2t" firstAttribute="leading" secondItem="NNW-rM-aSc" secondAttribute="leading" constant="8" id="HkE-zq-xR6"/>
+                            <constraint firstItem="NNW-rM-aSc" firstAttribute="top" secondItem="FGY-wG-Z2t" secondAttribute="bottom" constant="8" id="M0M-FW-hAg"/>
+                            <constraint firstItem="NNW-rM-aSc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yqr-at-enD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NNW-rM-aSc" secondAttribute="trailing" id="a6F-oq-cJJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NNW-rM-aSc" secondAttribute="bottom" id="iMv-ZU-50K"/>
+                            <constraint firstItem="FGY-wG-Z2t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="nWo-gN-oh0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="HAD-54-jVu"/>
+                    <connections>
+                        <outlet property="tableView" destination="NNW-rM-aSc" id="Xj7-P8-PlL"/>
+                        <segue destination="sSM-38-nIV" kind="showDetail" identifier="beer_details" id="Nye-ea-9gs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="90.401785714285708"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="SUR-Ko-3b2">
+            <objects>
+                <viewController id="sSM-38-nIV" customClass="DetailsViewController" customModule="Punk_Beer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jud-2D-zNq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottle" translatesAutoresizingMaskIntoConstraints="NO" id="eh6-0T-YL0">
+                                <rect key="frame" x="259" y="64" width="135" height="525"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eh6-0T-YL0" secondAttribute="height" multiplier="27:105" id="9kU-9n-lkF"/>
+                                    <constraint firstAttribute="width" priority="999" constant="135" id="s8a-SZ-WaL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERE-09-LFQ">
+                                <rect key="frame" x="20" y="64" width="219" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHk-VL-OtJ">
+                                <rect key="frame" x="20" y="110" width="219" height="16"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKP-wH-zcF">
+                                <rect key="frame" x="20" y="146" width="219" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wb7-UF-Pbi">
+                                <rect key="frame" x="20" y="186.5" width="219" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jph-JY-3md"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="eh6-0T-YL0" firstAttribute="leading" secondItem="ERE-09-LFQ" secondAttribute="trailing" constant="20" id="9SY-h7-9Rp"/>
+                            <constraint firstItem="wb7-UF-Pbi" firstAttribute="top" secondItem="BKP-wH-zcF" secondAttribute="bottom" constant="20" id="CzQ-yw-gCJ"/>
+                            <constraint firstItem="Jph-JY-3md" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eh6-0T-YL0" secondAttribute="bottom" constant="50" id="D3a-NU-SKr"/>
+                            <constraint firstItem="ERE-09-LFQ" firstAttribute="top" secondItem="eh6-0T-YL0" secondAttribute="top" id="D6Y-kq-nYJ"/>
+                            <constraint firstItem="BKP-wH-zcF" firstAttribute="leading" secondItem="LHk-VL-OtJ" secondAttribute="leading" id="ExD-ez-w0m"/>
+                            <constraint firstItem="wb7-UF-Pbi" firstAttribute="trailing" secondItem="BKP-wH-zcF" secondAttribute="trailing" id="FKD-Ht-V73"/>
+                            <constraint firstItem="BKP-wH-zcF" firstAttribute="top" secondItem="LHk-VL-OtJ" secondAttribute="bottom" constant="20" id="H0o-lg-byc"/>
+                            <constraint firstItem="wb7-UF-Pbi" firstAttribute="leading" secondItem="BKP-wH-zcF" secondAttribute="leading" id="NUS-5x-3Kw"/>
+                            <constraint firstItem="eh6-0T-YL0" firstAttribute="top" secondItem="Jph-JY-3md" secondAttribute="top" constant="20" id="Nbx-vJ-ViU"/>
+                            <constraint firstItem="ERE-09-LFQ" firstAttribute="leading" secondItem="Jph-JY-3md" secondAttribute="leading" constant="20" id="Qt0-gr-Ytl"/>
+                            <constraint firstItem="LHk-VL-OtJ" firstAttribute="leading" secondItem="ERE-09-LFQ" secondAttribute="leading" id="UPi-aP-vHO"/>
+                            <constraint firstItem="LHk-VL-OtJ" firstAttribute="trailing" secondItem="ERE-09-LFQ" secondAttribute="trailing" id="cj5-1q-IFi"/>
+                            <constraint firstItem="BKP-wH-zcF" firstAttribute="trailing" secondItem="LHk-VL-OtJ" secondAttribute="trailing" id="gnu-Ti-Oao"/>
+                            <constraint firstItem="LHk-VL-OtJ" firstAttribute="top" secondItem="ERE-09-LFQ" secondAttribute="bottom" constant="20" id="mDG-FH-QoR"/>
+                            <constraint firstItem="Jph-JY-3md" firstAttribute="trailing" secondItem="eh6-0T-YL0" secondAttribute="trailing" constant="20" id="vVd-0C-EUz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="abvLabel" destination="LHk-VL-OtJ" id="MpG-Jg-IbQ"/>
+                        <outlet property="beerPicture" destination="eh6-0T-YL0" id="e0s-1Z-uP2"/>
+                        <outlet property="descriptionLabel" destination="BKP-wH-zcF" id="Mb9-hw-tL7"/>
+                        <outlet property="foodPairingLabel" destination="wb7-UF-Pbi" id="0rf-Cf-qJG"/>
+                        <outlet property="nameLabel" destination="ERE-09-LFQ" id="uzC-Vn-p8B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tAO-YK-aIA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1940.5797101449277" y="105.80357142857143"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aVQ-yT-aRk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ewQ-zi-PmH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0EV-ld-14e">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="adL-lq-wap"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M9E-Fl-Xmm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="90.401785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bottle" width="271" height="1058"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
